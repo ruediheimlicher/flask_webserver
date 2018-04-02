@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+   <head>
+      <title>{{ title }}</title>
+	<link rel="stylesheet" href="../static/style_data.css/">
+   </head>
+   <body>
+
+
+      <h1>Webserver Data</h1>
+      <h2>Datum und Zeit: {{ time }}</h2>
+	
+	<p>data 0: {{out_data[0]}}</p>
+	<p>data 1: {{out_data[1]}}</p>
+	<p>data 2: {{out_data[2]}}</p>
+	<p>data 3: {{out_data[3]}}</p>
+	
+
+	
+	
+	
+		<br>
+		<h4> Commands </h4>
+		<p> YLW LED Ctrl ==>
+		{% if  ledYlw   == 1 %}
+				<a href="/ledYlw/off"class="button">TURN OFF</a>
+			{% else %}
+				<a href="/ledYlw/on" class="button">TURN ON</a> 
+			{% endif %}	
+<!--
+		#	YLW LED Ctrl ==> 
+		#	<a href="/ledYlw/on" class="button">TURN ON</a>  
+		#	<a href="/ledYlw/off"class="button">TURN OFF</a>
+-->
+		</p>
+		<h4> 
+			Fertig 
+			<a href="../" class="button">Back</a>  
+		</h4>
+
+ 		</h1>
+		<h4>{{ buttontitle }}</h2>
+		<p>Knopf pressed:  {{ button }}</p>
+		<p>Motion detected: {{ senPIR }}</p>
+
+
+
+
+
+
+  </body>
+</html>

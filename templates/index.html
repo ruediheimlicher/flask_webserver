@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+   <head>
+      <title>{{ title }}</title>
+	<link rel="stylesheet" href="../static/style.css/">
+   </head>
+   <body>
+
+
+      <h1>Webserver</h1>
+      <h2>Datum und Zeit: {{ time }}</h2>
+	
+	
+	
+	<p>passwort ist: {{pw}}</p>
+		
+		<p>d1 = {{d1}}
+		<p>d2 = {{d2}}
+		<p>d3 = {{d3}}
+
+		{% if (d1|int + d2|int) == 0 %}
+			<p>d1 = {{'*'}}
+			<p>d2 = {{'*'}}
+		{% else %}
+			<p>summe = {{d1|int + d2|int}}
+	
+		{% endif %}
+
+ 
+		<h4>Actuators</h4>
+		<p> Status <p>
+		<p> gelbe LED ==>  {{ ledYlw  }}</p>
+		<p> gruene LED ==>  {{ ledGrn  }}</p>
+		<h4> Commands </h4>
+		<p> YLW LED Ctrl ==>
+		{% if  ledYlw   == 1 %}
+				<a href="/ledYlw/off"class="button">TURN OFF</a>
+			{% else %}
+				<a href="/ledYlw/on" class="button">TURN ON</a> 
+			{% endif %}	
+<!--
+		#	YLW LED Ctrl ==> 
+		#	<a href="/ledYlw/on" class="button">TURN ON</a>  
+		#	<a href="/ledYlw/off"class="button">TURN OFF</a>
+
+		</p>
+		<p>antwort: {{'antwort'}}
+-->
+		<h4> 
+			GRN LED Ctrl ==> 
+			<a href="/ledGrn/on" class="button">TURN ON</a>  
+			<a href="/ledGrn/off"class="button">TURN OFF</a>
+		</h4>
+
+ 		</h1>
+		<h4>{{ buttontitle }}</h2>
+		<p>Knopf pressed:  {{ button }}</p>
+		<p>Motion detected: {{ senPIR }}</p>
+
+
+
+
+
+
+  </body>
+</html>

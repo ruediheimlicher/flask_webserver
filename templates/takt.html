@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+   <head>
+	<title>Takt</title>
+	<meta http-equiv=”refresh” content=”10">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  	
+   <style>
+   
+   	p {
+	font:  14px Arial;
+	border: 0px solid powderblue;
+	margin: 0px;
+	margin-bottom: 1px;
+	color:white;
+	}
+table {
+	font:  14px Arial;
+	border-collapse: collapse;
+	margin-top:4px;
+  	border-top: 0px solid #CCCCCC;
+ 	border-right: 0px solid #333333;
+  	border-bottom: 0px solid #333333;
+  	border-left: 0px solid #CCCCCC;
+
+
+}
+th {
+	font:  14px Arial;
+	text-align: center;
+	color: white;
+	padding: 2px;
+	border: 1px solid white;
+	margin: 0px;
+	margin-bottom: 0px;
+	
+	color:white;
+}
+td {
+	font:  14px Arial;
+	color: white;
+	text-align: center;
+	padding: 2px;
+	border: 1px solid white;
+	margin: 0px;
+	margin-right: 4px;
+	color:white;
+}
+
+   
+   
+   </style>
+   
+   </head>
+   <body>
+
+
+    <h4>Webserver Takt Daten</h4>
+    <p>Datum und Zeit: {{ time }}</p>
+	<p>pwok: {{pwok}}
+	<p>twitakt={{twitakt}} {# > okcode=status0 oder status1 #}
+	
+	<p>terminalda: {{terminalda}}
+	<p>webspistatus: {{webspistatus}}
+	
+	<p>F1 or shift-ctrl-q to exit</p>
+	
+	<h4><br>IN_Daten</h4>
+	<table >
+	  <tr>
+    		<th>in_start</th>
+    		<th>in_lb</th>
+    		<th>in_hb</th>
+  		</tr>
+  		<tr>
+    		<td><h4>{{in_startdaten}}<h4/></td>
+    		<td>{{in_lbdaten}}</td>
+    		<td>{{in_hbdaten}}</td>
+  	</tr>
+
+	</table>
+	
+	<table >
+	
+		<tr>
+			{% for row in range(0,24) %}
+				<th width = 30px>{{indatenlist[0][row]}}</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{indatenlist[1][row]}}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{indatenlist[2][row]}}</td>
+			{% endfor %}
+		</tr>
+		
+	
+	</table>
+	<h4><br>OUT_Daten</h4>
+	<table >
+	  <tr>
+    		<th>out_start</td>
+    		<th>out_lb</td>
+    		<th>out_hb</td>
+  		</tr>
+  		<tr>
+    		<td><h4>{{out_startdaten}}<h4/></td>
+    		<td>{{out_lbdaten}}</td>
+    		<td>{{out_hbdaten}}</td>
+  	</tr>
+	
+	<table >
+	
+		<tr>
+			{% for row in range(0,24) %}
+				<th width = 30px>{{outdatenlist[0][row]}}</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{outdatenlist[1][row]}}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{outdatenlist[2][row]}}</th>
+			{% endfor %}
+		</tr>
+		
+	
+	</table>
+
+
+  </body>
+</html>

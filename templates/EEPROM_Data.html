@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+   <head>
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+
+
+    <h4>Webserver {{title}}</h4>
+    <p>Datum und Zeit: {{ time }}</p>
+	<p>pwok: {{pwok}}
+	<p>okcode={{twistatus}}
+
+	<p>terminalda: {{terminalda}}
+	
+	<h4><br>IN_DATEN:</h4>
+	
+		<p> in_startdaten = {{in_startdaten}}	</p>	
+		<p> in_lbdaten = {{in_lbdaten}}</p>
+		<p> in_hbdaten = {{in_hbdaten}}</p>
+		
+		<p><br>in_datenstring={{indatastring}}*</p> {# data in Form 0+0+0+0+0+0+0+0 #}
+	
+	<h4><br>OUT_Daten</h4>
+	
+		<p> out_startdaten = {{out_startdaten}}	</p>	
+		<p> out_lbdaten = {{out_lbdaten}}</p>
+		<p> out_hbdaten = {{out_hbdaten}}</p>
+	
+		<p><br>out_datenstring={{outdatastring}} {# data in Form 0+0+0+0+0+0+0+0 #}	 
+
+  </body>
+</html>

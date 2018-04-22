@@ -1,0 +1,2 @@
+soft-SPI von webserver aus  aus
+Zugriff Webinterface vom EEPROM aus r/w

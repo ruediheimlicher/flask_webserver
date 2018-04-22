@@ -1,7 +1,9 @@
 <!DOCTYPE html>
    <head>
       <title>{{ title }}</title>
-	<link rel="stylesheet" href="../static/style_data.css/">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style_data.css') }}">
+  
+  
    </head>
    <body>
 
@@ -9,12 +11,24 @@
       <h1>Webserver Data</h1>
       <h2>Datum und Zeit: {{ time }}</h2>
 	
-	<p>data 0: {{out_data[0]}}</p>
-	<p>data 1: {{out_data[1]}}</p>
-	<p>data 2: {{out_data[2]}}</p>
-	<p>data 3: {{out_data[3]}}</p>
-	
+		<p> out_startdaten = {{out_startdaten}}		
+		 out_lbdaten = {{out_lbdaten}}
+		 out_hbdaten = {{out_hbdaten}}
+		 outdatastring = {{outdatastring}}
+		 </p>
+		<p> in_startdaten = {{in_startdaten}}		
+		 in_lbdaten = {{in_lbdaten}}
+		 in_hbdaten = {{out_hbdaten}}
+		 indatastring = {{indatastring}}
+		 </p>
+		 
 
+	
+	<p>pw: {{pw}}
+	<p>pwIP: {{pwIP}}
+	<p>pwok: {{pwok}}
+	<p>approot: {{approot}}
+	<p>appstatic: {{appstatic}}
 	
 	
 	

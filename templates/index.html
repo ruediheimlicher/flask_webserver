@@ -1,7 +1,18 @@
 <!DOCTYPE html>
    <head>
       <title>{{ title }}</title>
-	<link rel="stylesheet" href="../static/style.css/">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+	<meta http-equiv=”refresh” content=”10">
+	<style>
+  	p {
+	font:  12px Arial;
+	border: 0px solid powderblue;
+	margin: 4px;
+	margin-bottom: 4px;
+	color:white;
+	}
+
+</style>
    </head>
    <body>
 
@@ -9,13 +20,90 @@
       <h1>Webserver</h1>
       <h2>Datum und Zeit: {{ time }}</h2>
 	
-	
+		<p>okcode={{twistatus}}
 	
 	<p>passwort ist: {{pw}}</p>
 		
-		<p>d1 = {{d1}}
-		<p>d2 = {{d2}}
-		<p>d3 = {{d3}}
+		<p style="color:white;padding : 1px; font:  14px Arial;">d0 = {{d0}} d1 = {{d1}} | d2 = {{d2}} d3 = {{d3}}
+
+		<p> out_startdaten = {{out_startdaten}}		
+		 out_lbdaten = {{out_lbdaten}}
+		 out_hbdaten = {{out_hbdaten}}
+		 </p>
+		 
+		 <p>outdatastring = {{outdatastring}}
+		 
+		 	<h4><br>in_data</h4>
+	<table >
+	  <tr>
+    		<th>in_start</th>
+    		<th>in_lb</th>
+    		<th>in_hb</th>
+  		</tr>
+  		<tr>
+    		<td><h4>{{in_startdaten}}<h4/></td>
+    		<td>{{in_lbdaten}}</td>
+    		<td>{{in_hbdaten}}</td>
+  	</tr>
+
+	</table>
+	
+	<table >
+	
+		<tr>
+			{% for row in range(0,24) %}
+				<th width = 30px>{{indatalist[0][row]}}</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{indatalist[1][row]}}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{indatalist[2][row]}}</td>
+			{% endfor %}
+		</tr>
+		
+	
+	</table>
+	<h4><br>out_data</h4>
+	<table >
+	  <tr>
+    		<th>out_start</td>
+    		<th>out_lb</td>
+    		<th>out_hb</td>
+  		</tr>
+  		<tr>
+    		<td><h4>{{out_startdaten}}<h4/></td>
+    		<td>{{out_lbdaten}}</td>
+    		<td>{{out_hbdaten}}</td>
+  	</tr>
+	
+	<table >
+	
+		<tr>
+			{% for row in range(0,24) %}
+				<th width = 30px>{{outdatalist[0][row]}}</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{outdatalist[1][row]}}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for row in range(0,24) %}
+				<td>{{outdatalist[2][row]}}</th>
+			{% endfor %}
+		</tr>
+		
+	
+	</table>
+
+		
+		<p>spi-summe = {{summe}}
 
 		{% if (d1|int + d2|int) == 0 %}
 			<p>d1 = {{'*'}}
@@ -31,6 +119,8 @@
 		<p> gelbe LED ==>  {{ ledYlw  }}</p>
 		<p> gruene LED ==>  {{ ledGrn  }}</p>
 		<h4> Commands </h4>
+		<p><a href="../" class="button">Reload</a> shift/ctrl/ q to escape full screen</p>
+		<p><a href="../twi?pw=ideur00&twitakt=2&b0=24&b1=91&b2=24&b3=91" class="button">Takt</a> </p>
 		<p> YLW LED Ctrl ==>
 		{% if  ledYlw   == 1 %}
 				<a href="/ledYlw/off"class="button">TURN OFF</a>

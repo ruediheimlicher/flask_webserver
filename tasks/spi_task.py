@@ -27,6 +27,9 @@ delay_pulse = sleep(0.000005)
 
 spi_task = Blueprint('spi_task', __name__)
 
+def spi_hallo():
+	return 13
+	
 def spi_shift_out_byte(out_data):
 	in_byte=0
 	# atoi war notwendig wenn der Array mit append gefuellt wurde

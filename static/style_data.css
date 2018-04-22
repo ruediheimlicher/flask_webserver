@@ -14,3 +14,39 @@ body {
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
 }
+
+
+h1 {
+	font:  32px Arial;
+	color: white;
+	margin: 0px;
+	margin-top: 4px;
+}
+h2 {
+	font:  24px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+h3 {
+	font:  20px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+h4 
+{
+	font:  16px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+
+
+p {
+	font:  18px Arial;
+    border: 0px solid powderblue;
+    padding: 1px;
+    margin: 0px;
+    color:white;
+}

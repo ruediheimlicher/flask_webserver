@@ -1,5 +1,5 @@
 body {
-   background: green;
+   background: #688A08;
    color: yellow;
 }
 
@@ -14,3 +14,56 @@ body {
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
 }
+
+.table {
+	font:  36px Arial;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+
+
+}
+
+h1 {
+	font:  36px Arial;
+	color: white;
+	margin: 0px;
+	margin-top: 4px;
+}
+h2 {
+	font:  24px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+h3 {
+	font:  22px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+h4 {
+	font:  18px Arial;
+	color: yellow;
+	margin: 0px;
+	margin-top: 4px;
+}
+
+p {
+	font:  12px Arial;
+	border: 0px solid white;
+	margin: 0px;
+	margin-bottom: 1px;
+	color:blue;
+}
+
+tr {
+	font:  18px Arial;
+	color: white;
+	border: 0px solid powderblue;
+	margin: 0px;
+	margin-bottom: 0px;
+	color:white;
+}
+
